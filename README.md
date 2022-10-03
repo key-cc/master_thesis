@@ -1,70 +1,38 @@
 # Master Thesis: Action Recognition in Video
 
-This repo will serve as a summary of the code in my master thesis. The video action recognition model includes BiLSTM, TSN, I3D, TimeSformer.(For the architecture of TSN, I3D, TimeSformer I used the open-source toolbox [MMaction2](https://github.com/open-mmlab/mmaction2) to help me build the models.)
+This repo will serve as a summary of the code in my master thesis. The video action recognition model includes ConvLSTM, P3D, ARTNet, Res3D, Res21D. I will mainly use the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php), [HMDB51 dataset](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) and [Something-Something V1 dataset](https://20bn.com/datasets/something-something/v1).
 
 ```
-mmaction2
-├── mmaction
-├── tools
-├── configs
-│   ├── _base_
-│   ├── recognition
-│   │   ├── i3d
-│   │   │   ├── my_i3d_r50_32x2x1_50e_hmdb51_rgb
-│   │   │   ├── my_i3d_r50_32x2x1_50e_ucf101_rgb
-│   │   │   ├── ...
-│   │   ├── timeSformer
-│   │   │   ├── ...
+master_thesis
+├── dataset.py
+├── log.py
+├── models.py
+├── test.py
+├── train.py
+├── test_on_video.py
 ├── data
-│   ├── hmdb51
-│   │   ├── hmdb51_{train,val}_split_{1,2,3}_rawframes.txt
-│   │   ├── hmdb51_{train,val}_split_{1,2,3}_videos.txt
-│   │   ├── annotations
-│   │   ├── videos
-│   │   │   ├── brush_hair
-│   │   │   │   ├── April_09_brush_hair_u_nm_np1_ba_goo_0.avi
-│   │   ├── rawframes
-│   │   │   ├── brush_hair
-│   │   │   │   ├── April_09_brush_hair_u_nm_np1_ba_goo_0
-│   │   │   │   │   ├── img_00001.jpg
-│   │   │   │   │   ├── img_00002.jpg
-│   │   │   │   │   ├── ...
+│   ├── _init_.py
+│   ├── download_ucf101.sh
+│   ├── extract_frames.py
+│   ├── UCF-101
+│   │   ├── ApplyEyeMakeup
+│   │   │   ├── v_ApplyEyeMakeup_g01_c01.avi
 │   │   │   ├── ...
-│   ├── ucf101
-│   │   ├── ucf101_{train,val}_split_{1,2,3}_rawframes.txt
-│   │   ├── ucf101_{train,val}_split_{1,2,3}_videos.txt
-│   │   ├── annotations
-│   │   ├── videos
-│   │   │   ├── ApplyEyeMakeup
-│   │   │   │   ├── v_ApplyEyeMakeup_g01_c01.avi
-│   │   ├── rawframes
-│   │   │   ├── ApplyEyeMakeup
-│   │   │   │   ├── v_ApplyEyeMakeup_g01_c01
-│   │   │   │   │   ├── img_00001.jpg
-│   │   │   │   │   ├── img_00002.jpg
-│   │   │   │   │   ├── ...
-│   │   │   ├── ...
-│   ├── sthv1
-│   │   ├── sthv1_{train,val}_list_rawframes.txt
-│   │   ├── sthv1_{train,val}_list_videos.txt
-│   │   ├── annotations
-│   |   ├── videos
-│   |   |   ├── 1.mp4
-│   |   |   ├──...
-│   |   ├── rawframes
-│   |   |   ├── 1
-│   |   |   |   ├── 00001.jpg
-│   |   |   |   ├── ...
-│   |   |   ├── ...
+│   │   ├── ...
+│   ├── UCF-101-frames
+│   │   ├── ApplyEyeMakeup
+│   │   │   ├── v_ApplyEyeMakeup_g01_c01
+│   │   │   │   ├── 0.jpg
+│   │   │   │   ├── 1.jpg
+│   │   │   │   ├── ...
+│   ├── ucfTrainTestlist
+│   │   ├── classlnd.txt
+│   │   ├── testlist01.txt
+│   │   ├── ...
+│   │   ├── trainlist01.txt
+│   │   ├── ...
 
 ```
-
-
-I will mainly use the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php), [HMDB51 dataset](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) and [Something-Something V1 dataset](https://20bn.com/datasets/something-something/v1).
-
-<p align="center">
-    <img src="assets/crawling.gif" width="400"\>
-</p>
 
 ## Dataset UCF101
 <!-- [DATASET] -->
@@ -91,20 +59,10 @@ I will mainly use the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php
   pages={2556-2563}
 }
 ```
-Colaboratory file: [I3D+TimeSformer](hmdb51.ipynb) 
-
-
-# Action Recognition in Video
-
-This repo will serve as a playground where I investigate different approaches to solving the problem of action recognition in video.
-
-I will mainly use the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php).
-
-<p align="center">
-    <img src="assets/crawling.gif" width="400"\>
-</p>
 
 ## Setup
+
+Colaboratory file: [I3D+TimeSformer](hmdb51.ipynb) 
 
 ```
 cd data/              
@@ -142,9 +100,6 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
                             --checkpoint_model model_checkpoints/ConvLSTM_150.pth
 ```
 
-<p align="center">
-    <img src="assets/penalty.gif" width="400"\>
-</p>
 
 ### Results
 
