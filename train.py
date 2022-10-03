@@ -103,7 +103,8 @@ if __name__ == "__main__":
             labels = Variable(y, requires_grad=False).to(device)
             with torch.no_grad():
                 # Reset LSTM hidden state
-                #model.lstm.reset_hidden_state()
+                if opt.model == 'ConvLSTM':
+                  model.lstm.reset_hidden_state()
                 # Get sequence predictions
                 predictions = model(image_sequences)
             # Compute metrics
