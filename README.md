@@ -80,8 +80,6 @@ The model is composed of:
 * A convolutional feature extractor (ResNet-152) which provides a latent representation of video frames
 * A bi-directional LSTM classifier which based on the latent representation of the video predicts the activity depicted
 
-I have made a trained model available [here](https://drive.google.com/open?id=1GlpN0m9uLbI9dg1ARbW9hDEf-VWe4Asl).
-
 ### Train  
 
 ```
