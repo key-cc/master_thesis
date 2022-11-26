@@ -139,6 +139,8 @@ class ConvLSTM(nn.Module):
 def train():
     
     model.train()
+    
+    logger.info('Total params: %.2fM' % (sum(p.numel() for p in model.parameters()) / 1000000.0))
 
     train_loss_data = 0.
     train_acc = 0.
