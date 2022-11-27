@@ -42,4 +42,4 @@ code_HockeyFight
 | :---: | :---: | :---: | 
 |  C3D  |     16 x 112 x 112     |  93.50  | 
 |  biLSTM + Attention  |   16 x 112 x 112     |  95.50  | 
-|  ARTNet  |     16x112x112      |  98.00  |
+|  ARTNet  |     16 x 112 x 112      |  98.00  |
