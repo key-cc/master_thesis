@@ -40,7 +40,6 @@ code_HockeyFight
 
 | Model | Input size | acc |
 | :---: | :---: | :---: | 
-|  C3D  |     16 x 70 x 110     |  93.50  | 
-|  R21D  |     8 x 112 x 112      |  96.00  |
-|  P3D  |     16 x 160 x 160      |  98.00 |
+|  C3D  |     16 x 112 x 112     |  93.50  | 
+|  biLSTM + Attention  |   16 x 112 x 112     |  95.50  | 
 |  ARTNet  |     16x112x112      |  98.00  |
