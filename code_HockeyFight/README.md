@@ -30,20 +30,25 @@ code_HockeyFight
 ```
 ## Setup
 ###  Data Preparation
- To prepare the data for the training and testing, please do:
-    ```Shell
+Download the Dataset [HockeyFight](https://paperswithcode.com/dataset/hockey-fight-detection-dataset) 
+To extract frames from the videos, please do:
+    ```
+    python extract_frames.py
+    ```
+To prepare the data for the training and testing and generate hdf5 files, please do:
+    ```
     python hockey_data.py
     ```
+(pay attention to change the absolute path in the file train.txt and test.txt )
 
-### Training
+### Training and Testing
  To train the model, please do:
-    ```Shell
+    ```
     python hockey_model_lstm.py
     python hockey_model_3dcnn.py
     python hockey_model_ARTNet.py
     ```
 
-### Testing
 
 ## Results and Models
 
