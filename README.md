@@ -1,6 +1,6 @@
 # Master Thesis: Action Recognition in Video
 
-This repo will serve as a summary of the code in my master thesis. The video action recognition model includes ConvLSTM, P3D, ARTNet, Res3D, Res21D. I will mainly use the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php), [HMDB51 dataset](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) and [Something-Something V1 dataset](https://20bn.com/datasets/something-something/v1).
+This repo will serve as a summary of the code in my master thesis. The video action recognition model includes ConvLSTM, P3D, ARTNet, Res3D, Res21D. I will mainly use the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php), [HMDB51 dataset](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) and [HockeyFight dataset](https://www.kaggle.com/datasets/yassershrief/hockey-fight-vidoes).
 
 ```
 master_thesis
@@ -37,6 +37,7 @@ master_thesis
 ## Dataset UCF101
 <!-- [DATASET] -->
 
+
 ```BibTeX
 @article{Soomro2012UCF101AD,
   title={UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild},
@@ -58,6 +59,19 @@ master_thesis
   year={2011},
   pages={2556-2563}
 }
+```
+
+## Dataset HockeyFights
+<!-- [DATASET] -->
+
+```BibTeX
+@inproceedings{Nievas2011ViolenceDI,
+  title={Violence Detection in Video Using Computer Vision Techniques},
+  author={Enrique Bermejo Nievas and Oscar D{\'e}niz-Su{\'a}rez and Gloria Bueno Garc{\'i}a and Rahul Sukthankar},
+  booktitle={CAIP},
+  year={2011}
+}
+
 ```
 
 ## Setup
