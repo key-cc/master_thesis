@@ -42,10 +42,16 @@ To prepare the data for the training and testing and generate hdf5 files, please
 (pay attention to change the absolute path in the file train.txt and test.txt )
 
 ### Training and Testing
- To train the model, please do:
+ To train the biLSTM model, please do:
     ```
     python hockey_model_lstm.py
+     ```
+ To train the C3D model, please do:  
+      ```
     python hockey_model_3dcnn.py
+     ```
+ To train the ARTNet model, please do:    
+      ```
     python hockey_model_ARTNet.py
     ```
 
