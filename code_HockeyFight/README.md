@@ -38,11 +38,8 @@ Download the Dataset [HockeyFight](https://paperswithcode.com/dataset/hockey-fig
 
 To extract frames from the videos, please do:
 
-    ```
-    
     python extract_frames.py
-    
-    ```    
+  
     
 To prepare the data for the training and testing and generate hdf5 files, please do:
 
