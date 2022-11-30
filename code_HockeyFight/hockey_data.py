@@ -43,7 +43,7 @@ def create_trainh5(number,length,height,width):
         label = np.asarray(label,dtype=np.int64)
         #print(label.shape)
 
-        f = h5py.File('hockey_train_lstm.h5','w')
+        f = h5py.File('hockey_train.h5','w')
         f['data'] = video                
         f['label'] = label         
         f.close()
@@ -79,7 +79,7 @@ def create_testh5(number,height,width):
         video = np.asarray(video,dtype=np.float32)          
         label = np.asarray(label,dtype=np.int64)       
 
-        f = h5py.File('hockey_test_lstm.h5','w')
+        f = h5py.File('hockey_test.h5','w')
         f['data'] = video                
         f['label'] = label         
         f.close()
