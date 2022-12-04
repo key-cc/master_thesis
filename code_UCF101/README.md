@@ -1,6 +1,6 @@
 # video action recognition experiment on dataset UCF101
 
-Video classification using Dataset: HockeyFights
+Video classification using Dataset: UCF101
 
 ```
 code_UCF101
