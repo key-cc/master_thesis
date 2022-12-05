@@ -10,27 +10,9 @@ master_thesis
 ├── test.py
 ├── train.py
 ├── test_on_video.py
-├── data
-│   ├── _init_.py
-│   ├── download_ucf101.sh
-│   ├── extract_frames.py
-│   ├── UCF-101
-│   │   ├── ApplyEyeMakeup
-│   │   │   ├── v_ApplyEyeMakeup_g01_c01.avi
-│   │   │   ├── ...
-│   │   ├── ...
-│   ├── UCF-101-frames
-│   │   ├── ApplyEyeMakeup
-│   │   │   ├── v_ApplyEyeMakeup_g01_c01
-│   │   │   │   ├── 0.jpg
-│   │   │   │   ├── 1.jpg
-│   │   │   │   ├── ...
-│   ├── ucfTrainTestlist
-│   │   ├── classlnd.txt
-│   │   ├── testlist01.txt
-│   │   ├── ...
-│   │   ├── trainlist01.txt
-│   │   ├── ...
+├── code_HockeyFight
+├── code_UCF101
+├── code_HMDB51
 
 ```
 
@@ -86,24 +68,7 @@ unzip UCF101TrainTestSplits-RecognitionTask.zip  # Unzip train / test split
 python3 extract_frames.py   # Extracts frames from the video (~26.2 GB, go grab a coffee for this)
 ```
 
-## ConvLSTM
 
-The only approach investigated so far. Enables action recognition in video by a bi-directional LSTM operating on frame embeddings extracted by a pre-trained ResNet-152 (ImageNet).
-
-The model is composed of:
-* A convolutional feature extractor (ResNet-152) which provides a latent representation of video frames
-* A bi-directional LSTM classifier which based on the latent representation of the video predicts the activity depicted
-
-### Train  
-
-```
-$ python3 train.py  --dataset_path data/UCF-101-frames/ \
-                    --split_path data/ucfTrainTestlist \
-                    --num_epochs 200 \
-                    --sequence_length 40 \
-                    --img_dim 112 \
-                    --latent_dim 512
-```
 
 ### Test on Video
 
@@ -114,5 +79,21 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 
 
 ### Results
+### UCF101
 
-The model reaches a classification accuracy of **91.27%** accuracy on a randomly sampled test set, composed of 20% of the total amount of video sequences from UCF-101. Will re-train this model on the offical train / test splits and post results as soon as I have time.
+| Model | Input size | acc |
+| :---: | :---: | :---: | 
+|  C3D  |     16 x 224 x 224     |  51.10  | 
+|  C3D (pretrained) |     16 x 224 x 224     |  77.58  | 
+|  biLSTM + Attention  |   16 x 224 x 224     |  73.20  | 
+|  biLSTM + Attention (with dropout) |   16 x 224 x 224     |    | 
+|  VTN  |     16 x 224 x 224      |  75.10  |
+|  VTN (pretrained) |     16 x 224 x 224      |  86.09  |
+
+### HockeyFights
+
+| Model | Input size | acc |
+| :---: | :---: | :---: | 
+|  C3D  |     16 x 112 x 112     |  93.50  | 
+|  biLSTM + Attention  |   16 x 112 x 112     |  95.50  | 
+|  ARTNet  |     16 x 112 x 112      |  98.00  |
