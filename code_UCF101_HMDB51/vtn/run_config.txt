@@ -1,0 +1,1 @@
+--root-path hy-tmp/data --result-path ./logs/ --dataset ucf101 --model resnet34_vtn --batch 16 -j 8 --clip-size 16 --st 2 --lr 1e-5 --pretrain-path resnet_34_vtn_rgb_kinetics.pth

@@ -81,23 +81,43 @@ $ python3 c3d_train.py
 
 ```
 ## VTN
-### Train  
-
 ```
-$ python3 train_vtn.py  
+cd vtn 
+```
+initialize the enviroment:
 
+```bash
+pip install -r requirements.txt
+```
+
+install FFmpeg in order to prepare training data:
+
+```bash
+sudo apt-get install ffmpeg
+```
+### Train  
+#### Train a Model (with ImageNet Pretrain)
+
+```bash
+python3 main.py --root-path ~/data --result-path ~/logs/experiment_name --dataset ucf101 --model resnet34_vtn \
+    --batch 64 -j 12 --clip-size 16 --st 2 --n-epochs 120 --lr 1e-4
+```    
+#### Fine-tune a Pretrained Model
+```
+python3 main.py --root-path ~/data --result-path ~/logs/ --dataset ucf101 --model resnet34_vtn \
+    --batch 64 -j 12 --clip-size 16 --st 2 --lr 1e-5 --pretrain-path ~/resnet34_vtn_kinetcs.pth
 ```
 
 
 ## Results and Models
 
-### HockeyFights
+### UCF101
 
 | Model | Input size | acc |
 | :---: | :---: | :---: | 
 |  C3D  |     16 x 224 x 224     |  51.10  | 
 |  C3D (pretrained) |     16 x 224 x 224     |  77.58  | 
 |  biLSTM + Attention  |   16 x 224 x 224     |  73.20  | 
-|  biLSTM + Attention (with dropout) |   16 x 224 x 224     |    | 
+|  biLSTM + Attention (with dropout) |   16 x 224 x 224     |  74.46  | 
 |  VTN  |     16 x 224 x 224      |  75.10  |
 |  VTN (pretrained) |     16 x 224 x 224      |  86.09  |

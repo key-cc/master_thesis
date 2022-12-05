@@ -1,0 +1,5 @@
+{
+  "n_classes": 101,
+  "video_path": "UCF-101-frames",
+  "annotation_path": "ucfTrainTestlist/ucf101_01.json"
+}
