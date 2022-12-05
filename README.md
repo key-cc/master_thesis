@@ -57,8 +57,6 @@ master_thesis
 
 ## Setup
 
-Colaboratory file: [I3D+TimeSformer](hmdb51.ipynb) 
-
 ```
 cd data/              
 bash download_ucf101.sh     # Downloads the UCF-101 dataset (~7.2 GB)
