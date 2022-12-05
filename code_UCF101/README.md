@@ -39,7 +39,7 @@ code_UCF101
 ###  Data Preparation
 Download the Dataset ## Dataset UCF101
 ```
-cd data/              
+cd master_thesis/code_UCF101/data             
 bash download_ucf101.sh     # Downloads the UCF-101 dataset (~7.2 GB)
 unrar x UCF101.rar          # Unrars dataset
 unzip UCF101TrainTestSplits-RecognitionTask.zip  # Unzip train / test split
