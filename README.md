@@ -11,8 +11,7 @@ master_thesis
 ├── train.py
 ├── test_on_video.py
 ├── code_HockeyFight
-├── code_UCF101
-├── code_HMDB51
+├── code_UCF101_HMDB51
 
 ```
 
@@ -86,7 +85,7 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 |  C3D  |     16 x 224 x 224     |  51.10  | 
 |  C3D (pretrained) |     16 x 224 x 224     |  77.58  | 
 |  biLSTM + Attention  |   16 x 224 x 224     |  73.20  | 
-|  biLSTM + Attention (with dropout) |   16 x 224 x 224     |    | 
+|  biLSTM + Attention (with dropout) |   16 x 224 x 224     | 74.46   | 
 |  VTN  |     16 x 224 x 224      |  75.10  |
 |  VTN (pretrained) |     16 x 224 x 224      |  86.09  |
 
