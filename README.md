@@ -78,19 +78,38 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 ### Results
 ### UCF101
 
-| Model | Input size | acc |
+| Model | Parameters | acc |
 | :---: | :---: | :---: | 
-|  C3D  |     16 x 224 x 224     |  51.10  | 
-|  C3D (pretrained) |     16 x 224 x 224     |  77.58  | 
-|  biLSTM + Attention  |   16 x 224 x 224     |  73.20  | 
-|  biLSTM + Attention (with dropout) |   16 x 224 x 224     | 74.46   | 
-|  VTN  |     16 x 224 x 224      |  75.10  |
-|  VTN (pretrained) |     16 x 224 x 224      |  86.09  |
+|  C3D (pretrained) |    78.00M    |  77.58  | 
+|  biLSTM + Attention (with dropout) |   74M    | 74.46   | 
+|  VTN (pretrained) |    25.54M     |  86.09  |
+|Divided Space-Time Attention (T+S) |  121.34M | 93.11|
+|Joint Space-Time Attention (ST)|  85.88M|91.83|
+|Space Attention Attention (S)|  85.88M | 91.36|
+|Swin-T| 49.59M | 92.60|
+
+
+### HMDB51
+
+| Model | Parameters | acc |
+| :---: | :---: | :---: | 
+|  C3D (pretrained) |     16 x 224 x 224     |  67.60  | 
+|  biLSTM + Attention  |   16 x 224 x 224     |  62.46  | 
+|  VTN (pretrained) |     16 x 224 x 224      |  60.25 |
+|Divided Space-Time Attention (T+S) |  121.3M | 66.08|
+|Joint Space-Time Attention (ST)|  85.84M|64.25|
+|Space Attention Attention (S)|  85.84M | 65.49|
+|Swin-T| 49.55M | 66.25|
+
 
 ### HockeyFights
 
-| Model | Input size | acc |
+| Model | Parameters| acc |
 | :---: | :---: | :---: | 
-|  C3D  |     16 x 112 x 112     |  93.50  | 
-|  biLSTM + Attention  |   16 x 112 x 112     |  95.50  | 
-|  ARTNet  |     16 x 112 x 112      |  98.00  |
+|  C3D  |     78M    |  93.50  | 
+|  biLSTM + Attention  |  26.41M     |  95.50  | 
+|  ARTNet  |    20.15M     |  98.00  |
+|Divided Space-Time Attention (T+S)| 121.27M| 93.50|
+|Joint Space-Time Attention (ST)| 85.81M| 92.00|
+|Space Attention Attention (S)|  85.80M |91.50|
+
