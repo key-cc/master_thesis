@@ -93,9 +93,9 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 
 | Model | Parameters | acc |
 | :---: | :---: | :---: | 
-|  C3D (pretrained) |     16 x 224 x 224     |  67.60  | 
-|  biLSTM + Attention  |   16 x 224 x 224     |  62.46  | 
-|  VTN (pretrained) |     16 x 224 x 224      |  60.25 |
+|  C3D (pretrained) |     78.20M     |  67.60  | 
+|  biLSTM + Attention  |   73.95M    |  62.46  | 
+|  VTN (pretrained) |     28.67M      |  60.25 |
 |Divided Space-Time Attention (T+S) |  121.3M | 66.08|
 |Joint Space-Time Attention (ST)|  85.84M|64.25|
 |Space Attention Attention (S)|  85.84M | 65.49|
