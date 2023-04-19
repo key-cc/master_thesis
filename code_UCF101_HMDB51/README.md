@@ -126,3 +126,9 @@ python3 main.py --root-path ~/data --result-path ~/logs/ --dataset ucf101 --mode
 |  biLSTM + Attention (with dropout) |   16 x 224 x 224     |  74.46  | 
 |  VTN  |     16 x 224 x 224      |  75.10  |
 |  VTN (pretrained) |     16 x 224 x 224      |  86.09  |
+
+<div align="center">
+  <div style="float:left;margin-right:10px;">
+  <img src="https://github.com/key-cc/master_thesis/blob/main/code_UCF101_HMDB51/test_ucfn.gif" width="380px"><br>
+    <p style="font-size:1.5vw;">Action Recognition Results on UCF101</p>
+  </div>
