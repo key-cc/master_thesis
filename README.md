@@ -88,6 +88,11 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 |Space Attention Attention (S)|  85.88M | 91.36|
 |Swin-T| 49.59M | 92.60|
 
+<div align="left">
+  <div style="float:left;margin-right:10px;">
+  <img src="https://github.com/key-cc/master_thesis/blob/main/code_UCF101_HMDB51/test_ucfn.gif" width="380px"><br>
+    <p style="font-size:1.5vw;">An example of action recognition on UCF101</p>
+  </div>
 
 ### HMDB51
 
@@ -101,6 +106,11 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 |Space Attention Attention (S)|  85.84M | 65.49|
 |Swin-T| 49.55M | 66.25|
 
+<div align="left">
+  <div style="float:left;margin-right:10px;">
+  <img src="https://github.com/open-mmlab/mmaction2/raw/master/resources/mmaction2_overview.gif" width="380px"><br>
+    <p style="font-size:1.5vw;">An example of action recognition on HMDB51</p>
+  </div>
 
 ### HockeyFights
 
@@ -113,3 +123,8 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 |Joint Space-Time Attention (ST)| 85.81M| 92.00|
 |Space Attention Attention (S)|  85.80M |91.50|
 
+<div align="left">
+  <div style="float:left;margin-right:10px;">
+  <img src="https://github.com/key-cc/master_thesis/blob/main/code_HockeyFight/test_hockeyfight.gif" width="380px"><br>
+    <p style="font-size:1.5vw;">An example of action recognition on HockeyFights</p>
+  </div>
