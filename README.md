@@ -90,7 +90,7 @@ $ python3 test_on_video.py  --video_path data/UCF-101/SoccerPenalty/v_SoccerPena
 
 <div align="left">
   <div style="float:left;margin-right:10px;">
-  <img src="https://github.com/key-cc/master_thesis/blob/main/code_UCF101_HMDB51/test_ucfn.gif" width="380px"><br>
+  <img src="https://github.com/key-cc/master_thesis/blob/main/code_UCF101_HMDB51/test1_ucf101.gif" width="380px"><br>
     <p style="font-size:1.5vw;">An example of action recognition on UCF101</p>
   </div>
 
